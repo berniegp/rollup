@@ -605,8 +605,6 @@ export default class Chunk {
 			renderedExports.length !== 0 ||
 			renderedDependencies.some(dep => (dep.reexports && dep.reexports.length !== 0)!);
 
-		// TODO Lukas Note: Mention in docs, that users/plugins are responsible to do their own caching
-		// TODO Lukas adapt plugin hook graphs and order in docs
 		const { intro, outro, banner, footer } = await createAddons(
 			outputOptions,
 			pluginDriver,
