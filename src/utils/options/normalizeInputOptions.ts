@@ -46,7 +46,7 @@ export function normalizeInputOptions(config: InputOptions): {
 		external: getIdMatcher(config.external),
 		inlineDynamicImports: getInlineDynamicImports(config, onwarn, strictDeprecations),
 		input: getInput(config),
-		makeAbsoluteExternalsRelative: config.makeAbsoluteExternalsRelative ?? true,
+		makeAbsoluteExternalsRelative: config.makeAbsoluteExternalsRelative ?? 'ifRelativeSource',
 		manualChunks: getManualChunks(config, onwarn, strictDeprecations),
 		maxParallelFileReads: getMaxParallelFileReads(config),
 		moduleContext: getModuleContext(config, context),
